@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Green Cloud Analyzer - Frontend
 
 Angular frontend application with Tailwind CSS v3.
@@ -26,3 +27,6 @@ Navigate to `http://localhost:4200`
 - Angular 20.3.10
 - Tailwind CSS 3.x
 - TypeScript
+=======
+# Green-Cloud-Analyzer
+>>>>>>> b5cb97ef16551fb20d333b2349ff66e945ceb813
