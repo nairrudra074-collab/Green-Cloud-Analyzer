@@ -1,0 +1,41 @@
+<div class="min-h-screen flex items-center justify-center px-4">
+  <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+    <h2 class="text-3xl font-bold text-gray-800 mb-2 text-center">Welcome Back</h2>
+    <p class="text-gray-600 text-center mb-6">Sign in to your account</p>
+    
+    <form (ngSubmit)="onSubmit()" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2">Email</label>
+        <input 
+          type="email" 
+          [(ngModel)]="email"
+          name="email"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="your@email.com">
+      </div>
+      
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2">Password</label>
+        <input 
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="••••••••">
+      </div>
+      
+      <button 
+        type="submit" 
+        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition shadow-lg">
+        Sign In
+      </button>
+    </form>
+    
+    <p class="text-center text-gray-600 mt-4">
+      Don't have an account? 
+      <a href="#" class="text-green-600 hover:text-green-700 font-semibold">Sign up</a>
+    </p>
+  </div>
+</div>

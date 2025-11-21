@@ -1,0 +1,68 @@
+<div class="min-h-screen flex items-center justify-center">
+  <div class="text-center px-4">
+    <h1 class="text-5xl md:text-6xl font-bold text-green-700 mb-6">
+      Green Cloud Analyzer
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      Monitor and optimize your cloud infrastructure's carbon footprint
+    </p>
+    <div class="space-x-4">
+      <a routerLink="/login" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition shadow-lg">
+        Get Started
+      </a>
+      <a routerLink="/dashboard" class="inline-block bg-white hover:bg-gray-100 text-green-700 font-bold py-3 px-8 rounded-lg transition shadow-lg border-2 border-green-600">
+        View Demo
+      </a>
+    </div>
+  </div>
+</div>
+
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="inline-flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-semibold">GC</div>
+        <span class="text-sm text-slate-500">VerdantCloud</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-heading font-semibold text-brand-dark leading-tight">
+        Measure cloud cost and carbon — act with confidence
+      </h1>
+      <p class="mt-4 text-lg text-slate-600 max-w-xl">
+        Visualize compute costs, estimate CO₂e per instance, and get rightsizing suggestions to lower spend and emissions.
+      </p>
+
+      <div class="mt-8 flex items-center gap-4">
+        <a routerLink="/dashboard" class="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-700 text-white px-5 py-3 rounded-lg shadow-md">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
+          View dashboard
+        </a>
+        <button class="px-5 py-3 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50">Get started</button>
+      </div>
+
+      <div class="mt-8 grid grid-cols-3 gap-3 text-sm">
+        <div class="bg-white p-3 rounded-lg shadow-soft">
+          <div class="text-xs text-slate-400">Estimated monthly cost</div>
+          <div class="mt-1 font-semibold text-brand-dark">$12,430</div>
+        </div>
+        <div class="bg-white p-3 rounded-lg shadow-soft">
+          <div class="text-xs text-slate-400">Total emissions (kg CO₂e)</div>
+          <div class="mt-1 font-semibold text-brand-dark">8,120</div>
+        </div>
+        <div class="bg-white p-3 rounded-lg shadow-soft">
+          <div class="text-xs text-slate-400">Potential savings</div>
+          <div class="mt-1 font-semibold text-leaf-500">~$2,100</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="bg-gradient-to-br from-white via-slate-50 to-primary-50 rounded-lg p-6 shadow-md">
+        <!-- Placeholder for live dashboard snapshot / chart -->
+        <div class="h-56 bg-gradient-to-b from-primary-50 to-white rounded-md flex items-center justify-center text-slate-300">
+          Dashboard preview (charts)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
