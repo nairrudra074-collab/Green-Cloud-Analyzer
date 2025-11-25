@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
@@ -15,4 +16,11 @@ export class DashboardComponent {
     { title: 'Monthly Cost', value: '$2,345', icon: '💰', trend: '-8%' },
     { title: 'Efficiency Score', value: '87%', icon: '⚡', trend: '+15%' }
   ];
+
+  constructor(private router: Router) {}
+
+  logout() {
+    localStorage.removeItem('auth_token');
+    this.router.navigate(['/login']);
+  }
 }

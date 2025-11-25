@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   // make this component standalone and import FormsModule so `[(ngModel)]` is available
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -18,7 +18,10 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   onSubmit() {
-    console.log('Login attempt:', this.email);
+    // Simple authentication - store token
+    localStorage.setItem('auth_token', 'demo-token-' + Date.now());
+    
+    // Redirect to dashboard
     this.router.navigate(['/dashboard']);
   }
 }

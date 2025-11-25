@@ -5,9 +5,9 @@
       <div class="flex justify-between items-center">
         <h1 class="text-3xl font-bold text-gray-800">Dashboard</h1>
         <nav class="space-x-4">
-          <a routerLink="/" class="text-gray-600 hover:text-green-600 transition">Home</a>
-          <a href="#" class="text-gray-600 hover:text-green-600 transition">Reports</a>
-          <a href="#" class="text-gray-600 hover:text-green-600 transition">Settings</a>
+          <button (click)="logout()" class="text-gray-600 hover:text-red-600 transition font-semibold">
+            Logout
+          </button>
         </nav>
       </div>
     </div>
@@ -15,14 +15,23 @@
 
   <!-- Main Content -->
   <main class="container mx-auto px-4 py-8">
+    <!-- Get Started Banner -->
+    <div class="bg-gradient-to-r from-green-500 to-blue-500 rounded-lg shadow-lg p-8 mb-8 text-white">
+      <h2 class="text-3xl font-bold mb-4">Welcome to Green Cloud Analyzer! 🌱</h2>
+      <p class="text-lg mb-6">Start monitoring your cloud infrastructure's carbon footprint and optimize for sustainability.</p>
+      <button class="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition shadow-lg">
+        Get Started →
+      </button>
+    </div>
+
     <!-- Metrics Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
       <div *ngFor="let metric of metrics" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
         <div class="flex items-center justify-between mb-4">
           <span class="text-4xl">{{metric.icon}}</span>
           <span class="text-sm font-semibold" 
-                [class.text-green-600]="metric.trend.startsWith('+')"
-                [class.text-red-600]="metric.trend.startsWith('-')">
+                [class.text-green-600]="metric.trend.startsWith('-')"
+                [class.text-red-600]="metric.trend.startsWith('+') && !metric.trend.includes('Efficiency')">
             {{metric.trend}}
           </span>
         </div>
